@@ -119,6 +119,12 @@ if ($_SESSION['user_name'] == "") {
                   <p>Roles</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="views/Suppliers/suppliers.php">
+                  <i class="fas fa-truck"></i>
+                  <p>Proveedores</p>
+                </a>
+              </li>
             <?php } ?>
           </ul>
         </div>
@@ -483,6 +489,27 @@ if ($_SESSION['user_name'] == "") {
                           <div class="numbers">
                             <p class="card-category">Clientes</p>
                             <h4 class="card-title">Aun no funciona!!</h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href="views/Suppliers/suppliers.php">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row align-items-center">
+                        <div class="col-icon">
+                          <div class="icon-big text-center icon-warning bubble-shadow-small">
+                            <i class="fas fa-truck"></i>
+                          </div>
+                        </div>
+                        <div class="col col-stats ms-3 ms-sm-0">
+                          <div class="numbers">
+                            <p class="card-category">Proveedores</p>
+                            <h4 class="card-title"></h4>
                           </div>
                         </div>
                       </div>

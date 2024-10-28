@@ -63,6 +63,12 @@
                         <p>Roles</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="../Suppliers/suppliers.php">
+                        <i class="fas fa-truck"></i>
+                        <p>Proveedores</p>
+                    </a>
+                </li>
                 <?php }?>
             </ul>
         </div>
