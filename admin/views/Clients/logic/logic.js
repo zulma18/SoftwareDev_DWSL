@@ -26,7 +26,7 @@ $(document).ready(function() {
                     pageLength: 25,
                     responsive: true,
                     columnDefs: [{
-                        targets: [5], // Cambia este índice según tu tabla
+                        targets: [6], // Cambia este índice según tu tabla
                         orderable: false,
                         searchable: false
                     }]

@@ -10,7 +10,7 @@ class Conf {
     public function __construct() {
         $this->server = 'localhost';
         $this->user = 'root';
-        $this->password = '';
+        $this->password = 'root';
         $this->db = 'stationeryDistributor';
         $this->connect();
     }
