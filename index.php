@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="p-4 pb-1 my-4 mb-2 mx-3">
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <a href="" class="">
-                                <h3 class="text-primary"><i class="fa fa-solid fa-swatchbook me-2"></i>Global Tech Solutions</h3>
+                                <h3 class="text-primary"><i class="fa fa-solid fa-swatchbook me-2"></i>Book Master</h3>
                             </a>
                         </div>
                         <div class="form-group mb-3">
@@ -95,24 +95,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <input
                               type="text"
                               class="form-control"
-                              placeholder="Username"
+                              placeholder="Usuario"
                               aria-label="Username"
                               aria-describedby="basic-addon1"
                               name="user_name"
                             />
                           </div>
                         <div class="form-group">
-                            <label for="password">Password</label>
+                            <label for="password">Contraseña</label>
                             <input
                               type="password"
                               class="form-control"
                               id="password"
-                              placeholder="Password"
+                              placeholder="Contraseña"
                               name="password"
                             />
                           </div>
                         <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Ingresar</button>
-                        <p class="text-center mb-0">Olvidaste tu contraseña? <a href="#">Click aqui</a></p>
                         <p class="text-center text-danger mt-0"><?= $error ?></p>
                     </div>
                 </form>
