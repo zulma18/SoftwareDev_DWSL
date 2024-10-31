@@ -69,6 +69,12 @@
                         <p>Proveedores</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="../Inventory/inventoryIndex.php">
+                        <i class=" "></i>
+                        <p>Inventario</p>
+                    </a>
+                </li>
                 <?php }?>
             </ul>
         </div>
