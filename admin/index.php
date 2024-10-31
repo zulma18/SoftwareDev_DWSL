@@ -414,7 +414,7 @@ if ($_SESSION['user_name'] == "") {
             <?php if ($_SESSION['user_role'] != 1) { ?>
               <!-- ESTA CARD AUN NO FUNCIONA SOLO ESTA A MODO DE PRUEBA -->
               <div class="col-sm-6 col-md-3">
-                <a href="views/Customers/customers.php">
+                <a href="views/Clientes/clientes.php">
                   <div class="card card-stats card-round">
                     <div class="card-body">
                       <div class="row align-items-center">
@@ -426,7 +426,7 @@ if ($_SESSION['user_name'] == "") {
                         <div class="col col-stats ms-3 ms-sm-0">
                           <div class="numbers">
                             <p class="card-category">Clientes</p>
-                            <h4 class="card-title">Aun no funciona</h4>
+                            <h4 class="card-title"></h4>
                           </div>
                         </div>
                       </div>
