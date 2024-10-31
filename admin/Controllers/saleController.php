@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $html .= '<td>' . $row['total'] . '</td>';
                 $html .= '<td>' . $row['date'] . '</td>';
                 $html .= '<td>
-                    <a href="#" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#updateModal" data-bs-id="' . $row['id'] . '"><i class="fa fa-edit"></i></a>
+                    <a href="#" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#saleDetailsModal" data-bs-id="' . $row['id'] . '"><i class="fa fa-info"></i></a>
                     <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-id="' . $row['id'] . '"><i class="fa fa-times"></i></a>
                   </td>';
                 $html .= '</tr>';
@@ -50,6 +50,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         echo $html;
         exit();
+    }
+
+    if ($action == "GetSaleDetails"){
+        $html = "";
+        $sale_result = $sale->get_sale_details_id($id);
+
+        if (!empty($sale_result)) {
+            foreach ($sale_result as $row) {
+                $html .= '<tr>';
+                $html .= '<td>' . $row['bookName'] . '</td>';
+                $html .= '<td>' . $row['sale_price'] . '</td>';
+                $html .= '<td>' . $row['quantity'] . '</td>';
+                $html .= '<td>' . $row['subtotal'] . '</td>';
+                $html .= '</tr>';
+            }
+        } else {
+            $html .= '<tr>';
+            $html .= '<td colspan="7">Sin resultados</td>';
+            $html .= '</tr>';
+        }
+        echo $html;
     }
 
     if ($action == "GetProducts") {

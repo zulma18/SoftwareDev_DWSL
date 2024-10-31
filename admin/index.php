@@ -118,7 +118,7 @@ if ($_SESSION['user_name'] == "") {
               </li>
               <li class="nav-item">
                 <a href="views/Inventory/inventoryIndex.php">
-                  <i class=""></i>
+                  <i class="fas fa-warehouse"></i>
                   <p>Inventario</p>
                 </a>
               </li>
@@ -528,7 +528,7 @@ if ($_SESSION['user_name'] == "") {
                       <div class="row align-items-center">
                         <div class="col-icon">
                           <div class="icon-big text-center icon-success bubble-shadow-small">
-                            <i class=""></i>
+                            <i class="fas fa-warehouse"></i>
                           </div>
                         </div>
                         <div class="col col-stats ms-3 ms-sm-0">

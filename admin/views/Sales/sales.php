@@ -92,7 +92,7 @@ if ($_SESSION['user_role'] != 1) {
                     <!-- FORMULARIOS MODALES -->
                     <?php
                     include_once('createModal.php');
-                    include_once('updateModal.php');
+                    include_once('saleDetailsModal.php');
                     include_once('deleteModal.php');
                     ?>
 

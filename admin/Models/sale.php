@@ -104,6 +104,21 @@ class Sale extends Conf {
         return $this->exec_query($query,$params);
     }
 
+    public function get_sale_details_id($id) {
+        $query = "select b.bookName, b.sale_price, a.quantity, b.sale_price * a.quantity as subtotal from sales_detail as a INNER JOIN inventory as b 
+        on a.product_id = b.id where a.sale_id = :id";
+
+        $params = [':id' => $id];
+
+        $result = $this->exec_query($query, $params);
+
+        if ($result){
+            return $result->fetchAll(PDO::FETCH_ASSOC);
+        } else {
+            return [];
+        }
+    }
+
     public function add_details($details) {
         $query = "INSERT INTO sales_detail (sale_id, product_id, quantity, unit_price) VALUES (:sale_id, :product_id, :quantity, :unit_price)";
 
