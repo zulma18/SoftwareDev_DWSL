@@ -100,7 +100,7 @@ if ($_SESSION['user_name'] == "") {
             <?php if ($_SESSION['user_role'] == 1) { ?>
               <li class="nav-item">
                 <a href="views/Users/users.php">
-                  <i class="fas fa-users"></i>
+                  <i class="fas fa-user"></i>
                   <p>Usuarios</p>
                 </a>
               </li>
@@ -108,6 +108,12 @@ if ($_SESSION['user_name'] == "") {
                 <a href="views/Roles/roles.php">
                   <i class="fas fa-briefcase"></i>
                   <p>Roles</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="views/Clients/clients.php">
+                  <i class="fas fa-users"></i>
+                  <p>Clientes</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -412,20 +418,19 @@ if ($_SESSION['user_name'] == "") {
 
           <div class="row">
             <?php if ($_SESSION['user_role'] != 1) { ?>
-              <!-- ESTA CARD AUN NO FUNCIONA SOLO ESTA A MODO DE PRUEBA -->
               <div class="col-sm-6 col-md-3">
-                <a href="views/Clientes/clientes.php">
+                <a href="views/Sales/sales.php">
                   <div class="card card-stats card-round">
                     <div class="card-body">
                       <div class="row align-items-center">
                         <div class="col-icon">
-                          <div class="icon-big text-center icon-warning bubble-shadow-small">
-                            <i class="fas fa-users"></i>
+                          <div class="icon-big text-center icon-danger bubble-shadow-small">
+                            <i class="fas fa-briefcase"></i>
                           </div>
                         </div>
                         <div class="col col-stats ms-3 ms-sm-0">
                           <div class="numbers">
-                            <p class="card-category">Clientes</p>
+                            <p class="card-category">Ventas</p>
                             <h4 class="card-title"></h4>
                           </div>
                         </div>
@@ -442,7 +447,7 @@ if ($_SESSION['user_name'] == "") {
                       <div class="row align-items-center">
                         <div class="col-icon">
                           <div class="icon-big text-center icon-primary bubble-shadow-small">
-                            <i class="fas fa-users"></i>
+                            <i class="fas fa-user"></i>
                           </div>
                         </div>
                         <div class="col col-stats ms-3 ms-sm-0">
@@ -462,7 +467,7 @@ if ($_SESSION['user_name'] == "") {
                     <div class="card-body">
                       <div class="row align-items-center">
                         <div class="col-icon">
-                          <div class="icon-big text-center icon-info bubble-shadow-small">
+                          <div class="icon-big text-center icon-danger bubble-shadow-small">
                             <i class="fas fa-briefcase"></i>
                           </div>
                         </div>
@@ -477,9 +482,9 @@ if ($_SESSION['user_name'] == "") {
                   </div>
                 </a>
               </div>
-              <!-- ESTA CARD AUN NO FUNCIONA SOLO ESTA A MODO DE PRUEBA -->
+
               <div class="col-sm-6 col-md-3">
-                <a href="views/Customers/customers.php">
+                <a href="views/Clients/clients.php">
                   <div class="card card-stats card-round">
                     <div class="card-body">
                       <div class="row align-items-center">
@@ -491,7 +496,7 @@ if ($_SESSION['user_name'] == "") {
                         <div class="col col-stats ms-3 ms-sm-0">
                           <div class="numbers">
                             <p class="card-category">Clientes</p>
-                            <h4 class="card-title">Aun no funciona!!</h4>
+                            <h4 class="card-title"></h4>
                           </div>
                         </div>
                       </div>
@@ -505,7 +510,7 @@ if ($_SESSION['user_name'] == "") {
                     <div class="card-body">
                       <div class="row align-items-center">
                         <div class="col-icon">
-                          <div class="icon-big text-center icon-warning bubble-shadow-small">
+                          <div class="icon-big text-center icon-info bubble-shadow-small">
                             <i class="fas fa-truck"></i>
                           </div>
                         </div>
@@ -527,13 +532,35 @@ if ($_SESSION['user_name'] == "") {
                     <div class="card-body">
                       <div class="row align-items-center">
                         <div class="col-icon">
-                          <div class="icon-big text-center icon-success bubble-shadow-small">
+                          <div class="icon-big text-center icon-secondary bubble-shadow-small">
                             <i class="fas fa-warehouse"></i>
                           </div>
                         </div>
                         <div class="col col-stats ms-3 ms-sm-0">
                           <div class="numbers">
                             <p class="card-category">Inventario</p>
+                            <h4 class="card-title"></h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-sm-6 col-md-3">
+                <a href="views/Sales/sales.php">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row align-items-center">
+                        <div class="col-icon">
+                          <div class="icon-big text-center icon-success bubble-shadow-small">
+                            <i class="fas fa-briefcase"></i>
+                          </div>
+                        </div>
+                        <div class="col col-stats ms-3 ms-sm-0">
+                          <div class="numbers">
+                            <p class="card-category">Ventas</p>
                             <h4 class="card-title"></h4>
                           </div>
                         </div>

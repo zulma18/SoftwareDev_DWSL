@@ -85,8 +85,6 @@ if ($_SESSION['user_role'] != 1) {
 
             <div class="container">
                 <div class="page-inner">
-
-                    <p> Rol: <?= $_SESSION['rol'] ?></p>
                     <!-- FORMULARIOS MODALES -->
                     <?php
                     include_once('createModal.php');

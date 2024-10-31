@@ -1,9 +1,10 @@
 <?php
 session_start();
-if ($_SESSION['user_role'] != 1) {
+if ($_SESSION['user_role'] != 1 && $_SESSION['user_role'] != 2) {
     header("Location: ../../../index.php");
     exit();
 }
+
 
 ?>
 
