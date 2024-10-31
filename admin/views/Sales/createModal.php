@@ -8,12 +8,25 @@
             </div>
             <div class="modal-body">
                 <form action="" method="post">
-                    <div class="mb-3">
+                    <div class="d-flex justify-content-between align-items-center">
+
+                    
+                    <div class="mb-3 col-md-10">
                         <label for="customer_id">Cliente: </label>
                         <select class="form-select" name="customer_id" id="customer_id" required>
                             <option value="1">Seleccione el Cliente</option>
                             <!-- Opciones de cliente -->
                         </select>
+                    </div>
+
+                    <div class="mb-3">
+                                        
+                                        <button
+                                            class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addClientModal">
+                                            <i class="fa fa-plus"></i>
+                                            Registrar Cliente
+                                        </button>
+                                    </div>
                     </div>
 
                     <table id="details-table" class="table table-striped table-responsive table-bordered mt-2 bg-light">

@@ -95,6 +95,7 @@ if ($_SESSION['user_role'] != 1 && $_SESSION['user_role'] != 2) {
                     include_once('createModal.php');
                     include_once('saleDetailsModal.php');
                     include_once('deleteModal.php');
+                    include_once('addClientModal.php');
                     ?>
 
                     <div>
@@ -106,7 +107,7 @@ if ($_SESSION['user_role'] != 1 && $_SESSION['user_role'] != 2) {
                                         <button
                                             class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#createModal">
                                             <i class="fa fa-plus"></i>
-                                            Nuevo Registro
+                                            Registrar Venta
                                         </button>
                                     </div>
                                 </div>
@@ -173,7 +174,7 @@ if ($_SESSION['user_role'] != 1 && $_SESSION['user_role'] != 2) {
 
         </script>
 
-<script>
+        <script>
             $(document).ready(function() {
                 getClients();
 
@@ -214,6 +215,35 @@ if ($_SESSION['user_role'] != 1 && $_SESSION['user_role'] != 2) {
                             console.error('Error fetching roles:', error);
                         });
                 }
+
+                let addClientModal = document.getElementById("addClientModal");
+
+                addClientModal.addEventListener('submit', (event) => {
+                    event.preventDefault();
+
+                    let formData = new FormData(event.target);
+                    formData.append("action", 'Create');
+
+                    let url = "../../Controllers/clientController.php";
+
+                    fetch(url, {
+                            method: "POST",
+                            body: formData
+                        }).then(response => response.json())
+                        .then(data => {
+                            if (data.status == 'error') {
+                                addClientModal.querySelector('.modal-body #errorMessage').innerText = data.message;
+                            } else if (data.status == 'success') {
+                                addClientModal.querySelector('.modal-body #errorMessage').innerText = "";
+
+                                var bootstrapModal = bootstrap.Modal.getInstance(addClientModal);
+                                bootstrapModal.hide();
+
+                                getClients();
+                                showAlert(data.message);
+                            }
+                        });
+                });
             })
         </script>
 
@@ -301,9 +331,9 @@ if ($_SESSION['user_role'] != 1 && $_SESSION['user_role'] != 2) {
                     calculateTotalSale()
                 });
 
-     
 
-                
+
+
 
                 // searchProductInfo junto con la fila
                 $('#details-table').on('change', '.product-select', function() {
