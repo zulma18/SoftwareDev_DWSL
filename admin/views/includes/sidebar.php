@@ -41,41 +41,38 @@
                     <h4 class="text-section">Components</h4>
                 </li>
 
-                <?php if($_SESSION['user_role'] != 1) { ?>
+                <?php if ($_SESSION['user_role'] == 1) { ?>
                     <li class="nav-item">
-                        <a href="">
-                            <i class="fas fa-box-open"></i>
-                            <p>Ventas</p>
+                        <a href="../Users/users.php">
+                            <i class="fas fa-users"></i>
+                            <p>Usuarios</p>
                         </a>
                     </li>
-                <?php } else { ?>
-
-
+                    <li class="nav-item">
+                        <a href="../Roles/roles.php">
+                            <i class="fas fa-briefcase"></i>
+                            <p>Roles</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../Suppliers/suppliers.php">
+                            <i class="fas fa-truck"></i>
+                            <p>Proveedores</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../Inventory/inventoryIndex.php">
+                            <i class="fas fa-warehouse"></i>
+                            <p>Inventario</p>
+                        </a>
+                    </li>
+                <?php } ?>
                 <li class="nav-item">
-                    <a href="../Users/users.php">
-                        <i class="fas fa-users"></i>
-                        <p>Usuarios</p>
+                    <a href="../Sales/sales.php">
+                        <i class="fas fa-box-open"></i>
+                        <p>Ventas</p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="../Roles/roles.php">
-                        <i class="fas fa-briefcase"></i>
-                        <p>Roles</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="../Suppliers/suppliers.php">
-                        <i class="fas fa-truck"></i>
-                        <p>Proveedores</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="../Inventory/inventoryIndex.php">
-                        <i class=" "></i>
-                        <p>Inventario</p>
-                    </a>
-                </li>
-                <?php }?>
             </ul>
         </div>
     </div>

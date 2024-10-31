@@ -97,16 +97,7 @@ if ($_SESSION['user_name'] == "") {
               </span>
               <h4 class="text-section">Components</h4>
             </li>
-            <?php if ($_SESSION['user_role'] != 1) { ?>
-              <li class="nav-item">
-                <a href="">
-                  <i class="fas fa-box-open"></i>
-                  <p>Ventas</p>
-                </a>
-              </li>
-            <?php } else { ?>
-
-
+            <?php if ($_SESSION['user_role'] == 1) { ?>
               <li class="nav-item">
                 <a href="views/Users/users.php">
                   <i class="fas fa-users"></i>
@@ -131,7 +122,13 @@ if ($_SESSION['user_name'] == "") {
                   <p>Inventario</p>
                 </a>
               </li>
-            <?php } ?>
+            <?php }?>
+            <li class="nav-item">
+                <a href="views/Sales/sales.php">
+                  <i class="fas fa-box-open"></i>
+                  <p>Ventas</p>
+                </a>
+              </li>
           </ul>
         </div>
       </div>

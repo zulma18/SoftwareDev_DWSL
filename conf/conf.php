@@ -4,14 +4,15 @@ class Conf {
     private $user;
     private $password;
     private $db;
-    private $conn;
+    protected $conn;
 
 
     public function __construct() {
         $this->server = 'localhost';
         $this->user = 'root';
-        $this->password = '1234';
+        $this->password = '';
         $this->db = 'stationeryDistributor';
+        $this->connect();
     }
 
 
@@ -23,23 +24,13 @@ class Conf {
         } catch (PDOException $e) {
             echo  "Error en la conexion: " . $e->getMessage();
         }
-
-        return $this->conn;
-    }
-
-    protected function disconnect(){
-        $this->conn = null;
     }
 
     public function exec_query($query, $params=[]){
-        $this->connect();
-
         try {
             $stmt = $this->conn->prepare($query);
 
             $stmt->execute($params);
-
-            $this->disconnect();
 
             return $stmt;
         }catch (PDOException $e) {
